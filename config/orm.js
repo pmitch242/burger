@@ -60,7 +60,7 @@ const orm = {
             cb(result);
         });
     },
-    updateOne: function (cb) {
+    updateOne: function (condition, cb) {
         let queryString = "UPDATE burgers SET devoured = 1 WHERE ";
         queryString += condition;
 
