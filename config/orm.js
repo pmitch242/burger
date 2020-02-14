@@ -35,6 +35,44 @@ function objToSql(ob) {
     return arr.toString();
 }
 
-const orm = {};
+const orm = {
+    selectAll: function (cb) {
+        const queryString = "SELECT * FROM burgers;";
+        connection.query(queryString, function (err, result) {
+            if (err) {
+                throw err
+            }
+            cb(result);
+        })
+    },
+    insertOne: function (vals, cb) {
+        const queryString = "INSERT INTO burgers (burger_name) VALUES (";
+        queryString += printQuestionMarks(vals.length);
+        queryString += ") ";
+
+        console.log(queryString);
+
+        connection.query(queryString, vals, function (err, result) {
+            if (err) {
+                throw err;
+            }
+
+            cb(result);
+        });
+    },
+    updateOne: function (cb) {
+        const queryString = "UPDATE burgers SET devoured = 1 WHERE devoured = 0";
+
+        console.log(queryString);
+
+        connection.query(queryString, function (err, result) {
+            if (err) {
+                throw err;
+            }
+
+            cb(result);
+        });
+    }
+};
 
 module.exports = orm;
