@@ -46,7 +46,7 @@ const orm = {
         })
     },
     insertOne: function (vals, cb) {
-        const queryString = "INSERT INTO burgers (burger_name) VALUES (";
+        let queryString = "INSERT INTO burgers(burger_name) VALUES (";
         queryString += printQuestionMarks(vals.length);
         queryString += ") ";
 
@@ -61,7 +61,8 @@ const orm = {
         });
     },
     updateOne: function (cb) {
-        const queryString = "UPDATE burgers SET devoured = 1 WHERE devoured = 0";
+        let queryString = "UPDATE burgers SET devoured = 1 WHERE ";
+        queryString += condition;
 
         console.log(queryString);
 
