@@ -1,0 +1,9 @@
+DROP DATABASE IF EXISTS bugers_db;
+CREATE DATABASE bugers_db;
+USE bugers_db;
+
+CREATE TABLE burgers(
+		id INT AUTO_INCREMENT PRIMARY KEY,
+		burger_name VARCHAR(30) NOT NULL,
+        devoured BOOLEAN NOT NULL DEFAULT 0
+);
