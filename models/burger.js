@@ -12,7 +12,7 @@ const burger = {
             cb(res);
         });
     },
-    undateOne: (cb) => {
+    updateOne: (cb) => {
         orm.updateOne((res) => {
             cb(res);
         });
