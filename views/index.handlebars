@@ -1,0 +1,32 @@
+<div class="container main-container">
+    <img src="http://clipart-library.com/img1/1241302.png" alt="burger">
+    <h1>GATTA-EAT-BURGERS!</h1>
+    <form class="form">
+        <input class="form-control" id="burger-input" type="text" placeholder="Enter Burger">
+        <button type="button" id="submit-btn" class="btn btn-dark">Submit Burger</button>
+    </form>
+    <div class="container results-div">
+        <div class="row">
+            <div class="col-sm">
+                <h2>Ready to Eat</h2>
+                <ul>
+                    {{#each burgers}}
+                    {{#unless devoured}}
+                    {{>burgers/burger-new devoured=false}}
+                    {{/unless}}
+                    {{/each}}
+                </ul>
+            </div>
+            <div class="col-sm">
+                <ul>
+                    <h2>Eaten</h2>
+                    {{#each burgers}}
+                    {{#if devoured}}
+                    {{>burgers/burger-devoured devoured=true}}
+                    {{/if}}
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
