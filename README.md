@@ -6,7 +6,7 @@ The repo is a simple "burger logger" created with with MySQL, Node, Express, Han
 <img alt="Burger Log Preview" src="public/assets/images/preview.PNG">  
 
 
-## Usagae 
+## Usage 
 GATTA-EAT-BURGERS! is a restaurant app that lets users input the names of burgers they'd like to eat.
 Whenever a user submits a burger's name, the burger name will display on the left side of the page -- waiting to be devoured.
 Each burger in the waiting area also has a Devour it! button. When the user clicks it, the burger will move to the right side of the page.
