@@ -7,3 +7,5 @@ CREATE TABLE burgers(
 		burger_name VARCHAR(30) NOT NULL,
         devoured BOOLEAN NOT NULL DEFAULT 0
 );
+
+	select * from 	burgers;
