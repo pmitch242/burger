@@ -3,7 +3,7 @@
 The repo is a simple "burger logger" created with with MySQL, Node, Express, Handlebars and a self designed ORM. This repo, as well as most of my repos, follow MVC design pattern. I used Node and MySQL to query and route data, and Handlebars to generate the HTML.
 
 ## Preview
-<img alt="Burger Log Preview" src="public/assets/images/preview.png">  
+<img alt="Burger Log Preview" src="public/assets/images/preview.PNG">  
 
 
 ## Usagae 
